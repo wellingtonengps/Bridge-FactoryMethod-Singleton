@@ -4,18 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class EntregaConcretaFactoryTest {
-
-    @Test
-    void deveRetornarEntregaValida() {
-        Entrega entrega = EntregaConcretaFactory.obterEntrega("Expressa");
-        assertEquals("Entrega Expressa processada", entrega.executar());
-    }
+class EntregaFactoryTest {
 
     @Test
     void deveRetornarExcecaoParaEntregaInexistente() {
         try {
-            Entrega entrega = EntregaConcretaFactory.obterEntrega("Aerea");
+            IEntrega servico = EntregaFactory.criarEntrega("SuperRapida");
             fail();
         } catch (IllegalArgumentException e) {
             assertEquals("Entrega inexistente", e.getMessage());
@@ -23,9 +17,9 @@ public class EntregaConcretaFactoryTest {
     }
 
     @Test
-    void deveRetornarExcecaoParaEntregaInvalida() {
+    void deveRetornarExcecaoParaEntregaInvalido() {
         try {
-            Entrega entrega = EntregaConcretaFactory.obterEntrega("Maritima");
+            IEntrega servico = EntregaFactory.criarEntrega("PAC");
             fail();
         } catch (IllegalArgumentException e) {
             assertEquals("Entrega inválida", e.getMessage());

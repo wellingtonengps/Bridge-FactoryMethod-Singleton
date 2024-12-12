@@ -1,6 +1,6 @@
 package org.padroes.factoryMethod;
 
-public interface Entrega {
+public interface IEntrega {
     String realizarEntrega();
     double calcularCusto();
 }

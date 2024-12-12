@@ -1,6 +1,6 @@
 package org.padroes.factoryMethod;
 
-public class EntregaEconomica implements Entrega {
+public class EntregaEconomica implements IEntrega {
     @Override
     public String realizarEntrega() {
         return "Entrega econômica realizada!";
