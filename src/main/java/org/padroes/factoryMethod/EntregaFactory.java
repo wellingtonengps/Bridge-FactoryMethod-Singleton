@@ -5,7 +5,7 @@ public abstract class EntregaFactory {
         Class classe = null;
         Object objeto = null;
         try {
-            classe = Class.forName("org.padroes.factoryMethod" + tipo);
+            classe = Class.forName("org.padroes.factoryMethod.Entrega" + tipo);
 
             objeto = classe.newInstance();
         } catch (Exception ex) {

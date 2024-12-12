@@ -1,8 +1,8 @@
 package org.padroes.bridge;
 
-public class TransporteBicicleta extends Transporte {
+public class Carro extends Transporte {
 
-    public TransporteBicicleta(Tarifa tarifa) {
+    public Carro(Tarifa tarifa) {
         super(tarifa);
     }
 
